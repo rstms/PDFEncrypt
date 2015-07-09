@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="Setup_PDFEncrypt" Language="1033" Version="1.0.0.0" Manufacturer="Microsoft" UpgradeCode="0bb3de49-cd73-4d22-a691-f57fad945d11">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+    <Feature Id="ProductFeature" Title="Setup_PDFEncrypt" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="PDFEncrypt.Binaries" />
+      <ComponentRef Id="comp_6BD3BE36_1566_4CBC_B2D8_FAF21FE6BFEE" />
+      <ComponentRef Id="comp_DDAD2708_77D9_4D6A_943D_E98BAC4B67A5" />
+      <ComponentRef Id="comp_34B16F89_51B2_4822_A62C_18CF9142F054" />
+      <ComponentRef Id="comp_dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" />
+    </Feature>
+  </Product>
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="StartMenuFolder">
+        <Directory Id="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Name="PDFEncrypt">
+          <Component Id="comp_dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Guid="A5FA5F53-59B6-4688-A302-4D7D114FB5E0">
+            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Type="string" Value="New Folder #1 directory" KeyPath="yes" />
+            <RemoveFolder Id="id_02FF9EA2_9610_4750_9491_7FB86656B278" On="uninstall" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" />
+          </Component>
+          <Component Id="comp_DDAD2708_77D9_4D6A_943D_E98BAC4B67A5" Guid="377CB4DA-5475-4EAC-9375-7CDC2BAF5FE5" Permanent="no" SharedDllRefCount="no" Transitive="no">
+            <Shortcut Id="_22A4489C_8F3B_4EB6_B24C_B18C5420F3F2" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Name="Add to Context Menu" Show="normal" Target="[INSTALLFOLDER]PDFEncrypt.exe" WorkingDirectory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Arguments="-installmenu" />
+            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_DDAD2708_77D9_4D6A_943D_E98BAC4B67A5" Type="string" Value="User's Start Menu directory" KeyPath="yes" />
+          </Component>
+          <Component Id="comp_6BD3BE36_1566_4CBC_B2D8_FAF21FE6BFEE" Guid="9DB76592-4E59-4DF7-89C4-1F80AC445CA4" Permanent="no" SharedDllRefCount="no" Transitive="no">
+            <Shortcut Id="_68AF591A_D64A_40B2_99A8_AC76BEFEF82D" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Name="PDFEncrypt" Show="normal" Target="[INSTALLFOLDER]PDFEncrypt.exe" WorkingDirectory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Description="Copy all PDF Files in a directory to a new directory, adding password encryption." />
+            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_6BD3BE36_1566_4CBC_B2D8_FAF21FE6BFEE" Type="string" Value="User's Start Menu directory" KeyPath="yes" />
+          </Component>
+          <Component Id="comp_34B16F89_51B2_4822_A62C_18CF9142F054" Guid="26213365-05C5-4B7C-AC5F-03E76E4D74BE" Permanent="no" SharedDllRefCount="no" Transitive="no">
+            <Shortcut Id="_4D9AB4AE_AF01_4FE8_97DA_436D882BFD65" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Name="Remove Context Menu" Show="normal" Target="[INSTALLFOLDER]PDFEncrypt.exe" WorkingDirectory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Arguments="-removemenu" />
+            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_34B16F89_51B2_4822_A62C_18CF9142F054" Type="string" Value="User's Start Menu directory" KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="PDFEncrypt">
+          <Directory Id="PDFEncrypt.Binaries" />
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
+      <!-- <Component Id="ProductComponent"> -->
+      <!-- TODO: Insert files, registry keys, and other resources here. -->
+      <!-- </Component> -->
+      <Component Id="comp_8474BFF9_900D_4162_AC13_FA7137C6BBE0" Guid="C3E7E5E4-F08D-45CF-A73E-EF3FF3E95517" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_A0BDD458_D0CC_44D2_B3EB_C04A4BB14925" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="libgcc_s_dw2-1.dll" Source="..\..\..\..\..\Programs\qpdf-5.1.2\bin\libgcc_s_dw2-1.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="comp_0213E495_7850_47F3_8D6B_23B41379F2DD" Guid="D53A1875-CC74-4D49-9577-AE18C294A78E" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_7F619326_0064_4AF2_BDBA_6915A4D5A2A3" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="libstdc++-6.dll" Source="..\..\..\..\..\Programs\qpdf-5.1.2\bin\libstdc++-6.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="comp_AEEF3A69_BDF1_4C2C_BC85_9596339C969C" Guid="1AE21047-F8F3-4CC6-AEDA-6F0248FDEACC" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_E7C6DE06_4316_42FC_9A69_0ED62EB2F32B" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="qpdf.exe" Source="..\..\..\..\..\Programs\qpdf-5.1.2\bin\qpdf.exe" KeyPath="yes" />
+      </Component>
+      <Component Id="comp_863D021F_26A0_4B39_818E_0740D334F689" Guid="BD25B49F-81F9-46D7-8E6E-DE23027659F0" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_54683E87_975E_499D_9116_7EC394A139D1" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="qpdf13.dll" Source="..\..\..\..\..\Programs\qpdf-5.1.2\bin\qpdf13.dll" KeyPath="yes" />
+      </Component>
+      <Component Id="comp_7C2E7C6D_79B6_49BD_8FBE_A0E662192A6C" Guid="54668ED5-2B38-4153-B11E-7F50D47FB5FE" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_78B6A710_89CE_4FB4_B9D8_8FCB8AB10CA9" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="zlib-flate.exe" Source="..\..\..\..\..\Programs\qpdf-5.1.2\bin\zlib-flate.exe" KeyPath="yes" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
