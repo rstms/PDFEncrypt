@@ -63,6 +63,15 @@
       <Component Id="comp_7C2E7C6D_79B6_49BD_8FBE_A0E662192A6C" Guid="54668ED5-2B38-4153-B11E-7F50D47FB5FE" Permanent="no" SharedDllRefCount="no" Transitive="no">
         <File Id="_78B6A710_89CE_4FB4_B9D8_8FCB8AB10CA9" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="zlib-flate.exe" Source="..\..\..\..\..\Programs\qpdf-5.1.2\bin\zlib-flate.exe" KeyPath="yes" />
       </Component>
+      <Component Id="comp_B2CF90A7_7196_4FD3_A8BC_03EDCF8D4F10" Guid="50E8DD28-9B4B-4A31-A36F-842CF99F9A6D" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_FC63E07A_D5E0_43CB_825A_535BAAACFC40" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="AUTHORS" Source="..\..\..\..\..\Documents\Visual Studio 2013\Projects\PDFEncrypt\AUTHORS" KeyPath="yes" />
+      </Component>
+      <Component Id="comp_F7CB9B7F_1E98_49C4_BC1E_50F10566F36B" Guid="CC67365D-76E8-4213-8EAA-808D225E0421" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_D42795DD_6DC1_452C_81C6_00C143AF442D" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="LICENSE" Source="..\..\..\..\..\Documents\Visual Studio 2013\Projects\PDFEncrypt\LICENSE" KeyPath="yes" />
+      </Component>
+      <Component Id="comp_07D6093B_2B86_4C93_8B45_DFFA52C62710" Guid="18707C8C-5419-4157-B333-B02F196E2E3D" Permanent="no" SharedDllRefCount="no" Transitive="no">
+        <File Id="_D3BE9C36_5F18_49FE_8975_207AFB586F8B" DiskId="1" Hidden="no" ReadOnly="no" TrueType="no" System="no" Vital="yes" Name="README.md" Source="..\..\..\..\..\Documents\Visual Studio 2013\Projects\PDFEncrypt\README.md" KeyPath="yes" />
+      </Component>
     </ComponentGroup>
   </Fragment>
 </Wix>

@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PDFEncrypt")]
-[assembly: AssemblyDescription("Encrypt an entire directory of PDF files at once.    Uses Open Source PDF tool qpdf .  See <http://qpdf.sourceforge.net> for details.")]
+[assembly: AssemblyDescription("Copy all PDF files to a new directory, adding password encryption.    Uses Open Source PDF tool qpdf .  See <http://qpdf.sourceforge.net> for details.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Reliance Systems, Inc.")]
 [assembly: AssemblyProduct("PDFEncrypt")]
-[assembly: AssemblyCopyright("Copyright © Reliance Systems, Inc.  2015")]
+[assembly: AssemblyCopyright("Copyright © 2015 Reliance Systems, Inc. <mkrueger@rstms.net>")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
