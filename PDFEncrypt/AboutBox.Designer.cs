@@ -29,6 +29,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.textLicense = new System.Windows.Forms.TextBox();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();
             this.labelVersion = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.labelCompanyName = new System.Windows.Forms.Label();
             this.textBoxDescription = new System.Windows.Forms.TextBox();
             this.okButton = new System.Windows.Forms.Button();
-            this.textLicense = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logoPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,20 @@
             this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel.Size = new System.Drawing.Size(999, 372);
             this.tableLayoutPanel.TabIndex = 0;
+            // 
+            // textLicense
+            // 
+            this.textLicense.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textLicense.Location = new System.Drawing.Point(337, 230);
+            this.textLicense.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
+            this.textLicense.Multiline = true;
+            this.textLicense.Name = "textLicense";
+            this.textLicense.ReadOnly = true;
+            this.textLicense.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textLicense.Size = new System.Drawing.Size(658, 104);
+            this.textLicense.TabIndex = 25;
+            this.textLicense.TabStop = false;
+            this.textLicense.Text = resources.GetString("textLicense.Text");
             // 
             // logoPictureBox
             // 
@@ -158,20 +172,6 @@
             this.okButton.TabIndex = 24;
             this.okButton.Text = "&OK";
             this.okButton.Click += new System.EventHandler(this.okButton_Click);
-            // 
-            // textLicense
-            // 
-            this.textLicense.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textLicense.Location = new System.Drawing.Point(337, 230);
-            this.textLicense.Margin = new System.Windows.Forms.Padding(8, 4, 4, 4);
-            this.textLicense.Multiline = true;
-            this.textLicense.Name = "textLicense";
-            this.textLicense.ReadOnly = true;
-            this.textLicense.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textLicense.Size = new System.Drawing.Size(658, 104);
-            this.textLicense.TabIndex = 25;
-            this.textLicense.TabStop = false;
-            this.textLicense.Text = resources.GetString("textLicense.Text");
             // 
             // AboutBox
             // 

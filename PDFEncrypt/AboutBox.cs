@@ -26,7 +26,9 @@ namespace PDFEncrypt
                 + "see http://qpdf.sourceforge.net for details.";
 
             this.textLicense.Text = "The MIT License (MIT)\r\n"
+                + "\r\n"
                 + "Copyright (c) 2015 Reliance Systems, Inc. <mkrueger@rstms.net>\r\n"
+                + "\r\n"
                 + "Permission is hereby granted, free of charge, to any person obtaining a copy\r\n"
                 + "of this software and associated documentation files (the \"Software\"), to deal\r\n"
                 + "in the Software without restriction, including without limitation the rights\r\n"
