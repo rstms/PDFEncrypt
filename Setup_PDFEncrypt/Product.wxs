@@ -8,9 +8,8 @@
       <ComponentGroupRef Id="ProductComponents" />
       <ComponentGroupRef Id="PDFEncrypt.Binaries" />
       <ComponentRef Id="comp_6BD3BE36_1566_4CBC_B2D8_FAF21FE6BFEE" />
-      <ComponentRef Id="comp_DDAD2708_77D9_4D6A_943D_E98BAC4B67A5" />
-      <ComponentRef Id="comp_34B16F89_51B2_4822_A62C_18CF9142F054" />
       <ComponentRef Id="comp_dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" />
+      <ComponentGroupRef Id="RegistryGroup" />
     </Feature>
     <InstallUISequence>
       <Custom Action="ERRCA_UIANDADVERTISED" Sequence="5"><![CDATA[ProductState=1]]></Custom>
@@ -323,17 +322,9 @@
             <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Type="string" Value="New Folder #1 directory" KeyPath="yes" />
             <RemoveFolder Id="id_02FF9EA2_9610_4750_9491_7FB86656B278" On="uninstall" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" />
           </Component>
-          <Component Id="comp_DDAD2708_77D9_4D6A_943D_E98BAC4B67A5" Guid="377CB4DA-5475-4EAC-9375-7CDC2BAF5FE5" Permanent="no" SharedDllRefCount="no" Transitive="no">
-            <Shortcut Id="_22A4489C_8F3B_4EB6_B24C_B18C5420F3F2" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Name="Add to Context Menu" Show="normal" Target="[INSTALLFOLDER]PDFEncrypt.exe" WorkingDirectory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Arguments="-installmenu" />
-            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_DDAD2708_77D9_4D6A_943D_E98BAC4B67A5" Type="string" Value="User's Start Menu directory" KeyPath="yes" />
-          </Component>
           <Component Id="comp_6BD3BE36_1566_4CBC_B2D8_FAF21FE6BFEE" Guid="9DB76592-4E59-4DF7-89C4-1F80AC445CA4" Permanent="no" SharedDllRefCount="no" Transitive="no">
             <Shortcut Id="_68AF591A_D64A_40B2_99A8_AC76BEFEF82D" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Name="PDFEncrypt" Show="normal" Target="[INSTALLFOLDER]PDFEncrypt.exe" WorkingDirectory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Description="Copy all PDF Files in a directory to a new directory, adding password encryption." />
             <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_6BD3BE36_1566_4CBC_B2D8_FAF21FE6BFEE" Type="string" Value="User's Start Menu directory" KeyPath="yes" />
-          </Component>
-          <Component Id="comp_34B16F89_51B2_4822_A62C_18CF9142F054" Guid="26213365-05C5-4B7C-AC5F-03E76E4D74BE" Permanent="no" SharedDllRefCount="no" Transitive="no">
-            <Shortcut Id="_4D9AB4AE_AF01_4FE8_97DA_436D882BFD65" Directory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Name="Remove Context Menu" Show="normal" Target="[INSTALLFOLDER]PDFEncrypt.exe" WorkingDirectory="dir_95B5089C_7DC7_4DE3_8DA6_A1F68F0A2A09" Arguments="-removemenu" />
-            <RegistryValue Root="HKCU" Key="Software\[Manufacturer]\[ProductName]\Installer" Name="comp_34B16F89_51B2_4822_A62C_18CF9142F054" Type="string" Value="User's Start Menu directory" KeyPath="yes" />
           </Component>
         </Directory>
       </Directory>
@@ -343,6 +334,20 @@
         </Directory>
       </Directory>
     </Directory>
+    <ComponentGroup Id="RegistryGroup">
+      <Component Id="_F73FA1FC_439A_4F1A_B858_2CD430EDB810" Guid="F814F89F-BD60-4895-8987-BCD0F450DA92" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKCR" Key="*" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
+      </Component>
+      <Component Id="_E382779B_0917_44F0_A54A_A24FF7D70374" Guid="624F3276-210C-448C-BDA0-A13970B9AE8A" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKCR" Key="*\shell" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
+      </Component>
+      <Component Id="_1D6C586E_3F3D_459D_A79E_66140295A91F" Guid="82F854FF-1E81-4A3D-A853-2670DE9194E3" Transitive="no" Directory="TARGETDIR">
+        <RegistryKey Root="HKCR" Key="*\shell\Encrypt PDF with Password" ForceCreateOnInstall="no" ForceDeleteOnUninstall="yes" />
+      </Component>
+      <Component Id="_50BBB44D_9361_4BB0_9D9C_58C82661B782" Guid="9DDC5CAD-07AE-4328-AEA4-1FC660A65B77" Transitive="no" Directory="TARGETDIR">
+        <RegistryValue Root="HKCR" Key="*\shell\Encrypt PDF with Password\command" Type="string" Value="&quot;[INSTALLFOLDER]PDFEncrypt.exe&quot; -encrypt &quot;%1&quot;" />
+      </Component>
+    </ComponentGroup>
   </Fragment>
   <Fragment>
     <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">

@@ -63,7 +63,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(769, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(834, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,38 +84,38 @@
             // openInputDirectoryToolStripMenuItem
             // 
             this.openInputDirectoryToolStripMenuItem.Name = "openInputDirectoryToolStripMenuItem";
-            this.openInputDirectoryToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
-            this.openInputDirectoryToolStripMenuItem.Text = "&Input Directory";
+            this.openInputDirectoryToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.openInputDirectoryToolStripMenuItem.Text = "&Source PDF Folder";
             this.openInputDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openInputDirectoryToolStripMenuItem_Click);
             // 
             // outputDirectoryToolStripMenuItem
             // 
             this.outputDirectoryToolStripMenuItem.Name = "outputDirectoryToolStripMenuItem";
-            this.outputDirectoryToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
-            this.outputDirectoryToolStripMenuItem.Text = "&Output Directory";
+            this.outputDirectoryToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.outputDirectoryToolStripMenuItem.Text = "&Destination Folder";
             this.outputDirectoryToolStripMenuItem.Click += new System.EventHandler(this.outputDirectoryToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(186, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(197, 6);
             // 
             // encryptPDFToolStripMenuItem
             // 
             this.encryptPDFToolStripMenuItem.Name = "encryptPDFToolStripMenuItem";
-            this.encryptPDFToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
-            this.encryptPDFToolStripMenuItem.Text = "&Encrypt PDF";
+            this.encryptPDFToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
+            this.encryptPDFToolStripMenuItem.Text = "&Encrypt PDF Files";
             this.encryptPDFToolStripMenuItem.Click += new System.EventHandler(this.encryptPDFToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(186, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(197, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(189, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(200, 24);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -137,7 +137,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
             this.aboutToolStripMenuItem.Text = "&About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
@@ -145,9 +145,9 @@
             // 
             this.button1.Location = new System.Drawing.Point(12, 31);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 38);
+            this.button1.Size = new System.Drawing.Size(154, 38);
             this.button1.TabIndex = 1;
-            this.button1.Text = "Input Folder";
+            this.button1.Text = "&Source PDF Folder";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -155,9 +155,9 @@
             // 
             this.button2.Location = new System.Drawing.Point(12, 75);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 38);
+            this.button2.Size = new System.Drawing.Size(154, 38);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Output Folder";
+            this.button2.Text = "&Destination Folder";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -165,9 +165,9 @@
             // 
             this.button3.Location = new System.Drawing.Point(12, 119);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 38);
+            this.button3.Size = new System.Drawing.Size(154, 38);
             this.button3.TabIndex = 3;
-            this.button3.Text = "&Encrypt";
+            this.button3.Text = "Copy and &Encrypt";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -179,7 +179,7 @@
             this.StatusBarLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 168);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(769, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(834, 26);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -196,25 +196,25 @@
             // 
             // inputFolder
             // 
-            this.inputFolder.Location = new System.Drawing.Point(147, 39);
+            this.inputFolder.Location = new System.Drawing.Point(172, 39);
             this.inputFolder.Name = "inputFolder";
             this.inputFolder.ReadOnly = true;
-            this.inputFolder.Size = new System.Drawing.Size(613, 22);
+            this.inputFolder.Size = new System.Drawing.Size(650, 22);
             this.inputFolder.TabIndex = 6;
             // 
             // outputFolder
             // 
-            this.outputFolder.Location = new System.Drawing.Point(147, 83);
+            this.outputFolder.Location = new System.Drawing.Point(172, 83);
             this.outputFolder.Name = "outputFolder";
             this.outputFolder.ReadOnly = true;
-            this.outputFolder.Size = new System.Drawing.Size(613, 22);
+            this.outputFolder.Size = new System.Drawing.Size(650, 22);
             this.outputFolder.TabIndex = 7;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 194);
+            this.ClientSize = new System.Drawing.Size(834, 194);
             this.Controls.Add(this.outputFolder);
             this.Controls.Add(this.inputFolder);
             this.Controls.Add(this.statusStrip1);

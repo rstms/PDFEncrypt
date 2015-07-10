@@ -20,6 +20,7 @@ namespace PDFEncrypt
 
             if(args.Length > 0)
             {
+                /*
                 if (args[0].ToLower() == "-installmenu")
                 {
                     string exename = System.Reflection.Assembly.GetEntryAssembly().Location;
@@ -38,7 +39,9 @@ namespace PDFEncrypt
                     }
                     return;
                 }
-                else if (args[0].ToLower() == "-encrypt")
+                else 
+                */
+                if (args[0].ToLower() == "-encrypt")
                 {
                     flag = true;
                     filename = args[1];
