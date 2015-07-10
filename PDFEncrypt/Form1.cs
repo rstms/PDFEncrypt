@@ -16,8 +16,10 @@ namespace PDFEncrypt
 {
     public partial class Form1 : Form
     {
-        private string password = "";
         private const int CONVERT_TIMEOUT = 15000;
+        private const string DEFAULT_QPDF_OPTIONS = "256 --force-V4";
+        private const string REGISTRY_OPTIONS_KEY = "HKEY_CURRENT_USER\\Software\\RelianceSystems\\PDFEncrypt";
+        private string password = "";
         public bool singleFileMode = false;
         public string singleFileName = "";
 
@@ -200,11 +202,11 @@ namespace PDFEncrypt
         private bool encryptSingleFile(string indir, string outdir, string sfile)
         {
             // if registry setting exists, use it; otherwise, set it to the default value
-            string qpdf_options = "256";
-            System.Object ret = Registry.GetValue("HKEY_CURRENT_USER\\Software\\RelianceSystems\\PDFEncrypt", "qpdf_options", "256");
+            string qpdf_options = DEFAULT_QPDF_OPTIONS;
+            System.Object ret = Registry.GetValue(REGISTRY_OPTIONS_KEY, "qpdf_options", DEFAULT_QPDF_OPTIONS);
             if (ret!=null)
                 qpdf_options = ret.ToString();
-            Registry.SetValue("HKEY_CURRENT_USER\\Software\\RelianceSystems\\PDFEncrypt", "qpdf_options", qpdf_options);
+            Registry.SetValue(REGISTRY_OPTIONS_KEY, "qpdf_options", qpdf_options);
             
             StatusBarLabel.Text = "Converting " + sfile;
             string filename = Path.GetFileName(sfile);

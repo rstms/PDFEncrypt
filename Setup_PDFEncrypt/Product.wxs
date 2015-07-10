@@ -345,7 +345,7 @@
         <RegistryKey Root="HKCU" Key="Software\RelianceSystems" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
       </Component>
       <Component Id="_7F805D70_14AB_4DCD_9C71_14330AD8209C" Guid="20398F6F-E75F-401B-9AAD-5AC6C77D6FA0" Transitive="no" Directory="TARGETDIR">
-        <RegistryKey Root="HKCU" Key="Software\RelianceSystems\PDFEncrypt" ForceCreateOnInstall="no" ForceDeleteOnUninstall="yes" />
+        <RegistryKey Root="HKCU" Key="Software\RelianceSystems\PDFEncrypt" ForceCreateOnInstall="no" ForceDeleteOnUninstall="no" />
       </Component>
       <Component Id="_B6847228_A491_4747_A1B5_F26B60034D64" Guid="2B98F0B9-A553-43FD-B9FF-0D3BC9647E69" Transitive="no" Directory="TARGETDIR">
         <RegistryValue Root="HKCU" Key="Software\RelianceSystems\PDFEncrypt" Type="string" Name="qpdf_options" Value="256 --force-R5" />
