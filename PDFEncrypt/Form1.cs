@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using Microsoft.Win32;
 
 
 namespace PDFEncrypt
@@ -198,12 +199,20 @@ namespace PDFEncrypt
 
         private bool encryptSingleFile(string indir, string outdir, string sfile)
         {
+            // if registry setting exists, use it; otherwise, set it to the default value
+            string qpdf_options = "256";
+            System.Object ret = Registry.GetValue("HKEY_CURRENT_USER\\Software\\RelianceSystems\\PDFEncrypt", "qpdf_options", "256");
+            if (ret!=null)
+                qpdf_options = ret.ToString();
+            Registry.SetValue("HKEY_CURRENT_USER\\Software\\RelianceSystems\\PDFEncrypt", "qpdf_options", qpdf_options);
+            
             StatusBarLabel.Text = "Converting " + sfile;
             string filename = Path.GetFileName(sfile);
-            string cmdline = string.Format("\"{0}\" \"{1}\" --encrypt {2} {2} 256 --",
+            string cmdline = string.Format("\"{0}\" \"{1}\" --encrypt {2} {2} {3} --",
                 indir + "\\" + filename,
                 outdir + "\\" + filename,
-                password);
+                password,
+                qpdf_options);
 
             Process proc = new Process
             {
